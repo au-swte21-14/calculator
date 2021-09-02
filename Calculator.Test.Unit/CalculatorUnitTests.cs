@@ -42,5 +42,13 @@ namespace Calculator.Test.Unit
             Assert.AreEqual(_calc.Power(1, 1), 1);
             Assert.AreEqual(_calc.Power(2, 2), 4);
         }
+
+        [Test]
+        public void Divide()
+        {
+            Assert.AreEqual(_calc.Divide(1,1),1);
+            Assert.AreEqual(_calc.Divide(5.5,5.5),1);
+            Assert.That(_calc.Divide(20.5,5.5),Is.EqualTo(3.7).Within(0.2));
+        }
     }
 }
