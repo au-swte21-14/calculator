@@ -23,5 +23,30 @@ namespace Calculator
         {
             return Math.Pow(x, exp);
         }
+
+        public double Add(double addend)
+        {
+            return Add(Accumulator, addend);
+        }
+
+        public double Subtract(double subtractor)
+        {
+            return Subtract(Accumulator, subtractor);
+        }
+
+        public double Multiply(double multiplier)
+        {
+            return Multiply(Accumulator, multiplier);
+        }
+
+        public double Divide(double divisor)
+        {
+            return Divide(Accumulator, divisor);
+        }
+
+        public double Power(double exponent)
+        {
+            return Power(Accumulator, exponent);
+        }
     }
 }
