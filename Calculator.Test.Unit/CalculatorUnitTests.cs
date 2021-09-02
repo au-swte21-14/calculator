@@ -42,5 +42,18 @@ namespace Calculator.Test.Unit
             Assert.AreEqual(_calc.Power(1, 1), 1);
             Assert.AreEqual(_calc.Power(2, 2), 4);
         }
+        [Test]
+        public void Accumulator()
+        {
+            Assert.AreEqual(_calc.Power(2, 2), 4);
+            Assert.AreEqual(_calc.Accumulator, 4);
+        }
+        [Test]
+        public void Clear()
+        {
+            Assert.AreEqual(_calc.Accumulator, 0);
+
+        }
+
     }
 }

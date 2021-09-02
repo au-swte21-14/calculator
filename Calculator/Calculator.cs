@@ -23,5 +23,12 @@ namespace Calculator
         {
             return Math.Pow(x, exp);
         }
+        public double Accumulator { get; private set; }
+
+        public void Clear()
+        {
+            Console.Clear();
+        }
     }
+
 }

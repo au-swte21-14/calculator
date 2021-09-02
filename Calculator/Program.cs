@@ -11,6 +11,7 @@ namespace Calculator
             Console.WriteLine("2 * 2 er " + calc.Multiply(2, 2));
             Console.WriteLine("2 - 2 er " + calc.Subtract(2, 2));
             Console.WriteLine("2 ^ 2 er " + calc.Power(2, 2));
+            
         }
     }
 }
