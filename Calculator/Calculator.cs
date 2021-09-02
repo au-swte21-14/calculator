@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace Calculator
 {
@@ -21,7 +22,14 @@ namespace Calculator
 
         public double Power(double x, double exp)
         {
-            return Math.Pow(x, exp);
+            double ret = Math.Pow(x, exp);
+            if (Double.IsNaN(ret))
+            {
+                throw new InvalidDataException("Input is invalid");
+            }
+
+            return ret;
+
         }
 
         public double Divide(double dividend, double divisor)
