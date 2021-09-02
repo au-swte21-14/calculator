@@ -1,3 +1,4 @@
+using System.IO;
 using NUnit.Framework;
 
 namespace Calculator.Test.Unit
@@ -41,6 +42,7 @@ namespace Calculator.Test.Unit
         {
             Assert.AreEqual(_calc.Power(1, 1), 1);
             Assert.AreEqual(_calc.Power(2, 2), 4);
+            Assert.Throws<InvalidDataException>(()=>_calc.Power(-2, 2.2));
         }
 
         [Test]
