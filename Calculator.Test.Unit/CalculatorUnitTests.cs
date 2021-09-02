@@ -18,14 +18,15 @@ namespace Calculator.Test.Unit
             Assert.AreEqual(_calc.Add(1, 1), 2);
             Assert.AreEqual(_calc.Add(1, 2), 3);
         }
-        
+
         [Test]
         public void Multiply()
         {
             Assert.AreEqual(_calc.Multiply(1, 1), 1);
             Assert.AreEqual(_calc.Multiply(1, 2), 2);
+            Assert.AreEqual(_calc.Multiply(2, 2), 4);
         }
-        
+
         [Test]
         public void Subtract()
         {
