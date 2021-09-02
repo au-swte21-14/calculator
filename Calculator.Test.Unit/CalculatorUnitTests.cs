@@ -17,6 +17,8 @@ namespace Calculator.Test.Unit
         {
             Assert.AreEqual(_calc.Add(1, 1), 2);
             Assert.AreEqual(_calc.Add(1, 2), 3);
+            Assert.That(_calc.Add(1.2, 1.2), Is.EqualTo(2.4).Within(0.2));
+
         }
 
         [Test]
