@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Calculator
 {
@@ -11,7 +12,18 @@ namespace Calculator
             Console.WriteLine("2 * 2 er " + calc.Multiply(2, 2));
             Console.WriteLine("2 - 2 er " + calc.Subtract(2, 2));
             Console.WriteLine("2 ^ 2 er " + calc.Power(2, 2));
+            Console.WriteLine(("2 / 2 er ") + calc.Divide(2,2));
             
+            
+            try 
+            {
+                Console.WriteLine("(-2) ^ 2.2 er " + calc.Power(-2,2.2));
+            }
+            catch (InvalidDataException e)
+            {
+                Console.WriteLine(e);
+                
+            }
         }
     }
 }
