@@ -19,7 +19,6 @@ namespace Calculator.Test.Unit
             Assert.AreEqual(_calc.Add(1, 1), 2);
             Assert.AreEqual(_calc.Add(1, 2), 3);
             Assert.That(_calc.Add(1.2, 1.2), Is.EqualTo(2.4).Within(0.2));
-
         }
 
         [Test]
@@ -36,21 +35,36 @@ namespace Calculator.Test.Unit
             Assert.AreEqual(_calc.Subtract(1, 1), 0);
             Assert.AreEqual(_calc.Subtract(1, 2), -1);
         }
-        
+
         [Test]
         public void Power()
         {
             Assert.AreEqual(_calc.Power(1, 1), 1);
             Assert.AreEqual(_calc.Power(2, 2), 4);
-            Assert.Throws<InvalidDataException>(()=>_calc.Power(-2, 2.2));
+            Assert.Throws<InvalidDataException>(() => _calc.Power(-2, 2.2));
         }
 
         [Test]
         public void Divide()
         {
-            Assert.AreEqual(_calc.Divide(1,1),1);
-            Assert.AreEqual(_calc.Divide(5.5,5.5),1);
-            Assert.That(_calc.Divide(20.5,5.5),Is.EqualTo(3.7).Within(0.2));
+            Assert.AreEqual(_calc.Divide(1, 1), 1);
+            Assert.AreEqual(_calc.Divide(5.5, 5.5), 1);
+            Assert.That(_calc.Divide(20.5, 5.5), Is.EqualTo(3.7).Within(0.2));
+        }
+
+        [Test]
+        public void Accumulator()
+        {
+            Assert.AreEqual(_calc.Power(2, 2), 4);
+            Assert.AreEqual(_calc.Accumulator, 4);
+        }
+
+        [Test]
+        public void Clear()
+        {
+            Assert.AreEqual(_calc.Add(4), 4);
+            _calc.Clear();
+            Assert.AreEqual(_calc.Accumulator, 0);
         }
 
 
@@ -82,9 +96,9 @@ namespace Calculator.Test.Unit
         {
             Assert.AreEqual(_calc.Power(2), 0);
             Assert.AreEqual(_calc.Add(4), 4); // Fix power by zero
-            Assert.AreEqual(_calc.Power(4), 16);
+            Assert.AreEqual(_calc.Power(4), 256);
         }
-        
+
         [Test]
         public void DivideAccumulate()
         {

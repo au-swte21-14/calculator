@@ -7,17 +7,20 @@ namespace Calculator
     {
         public double Add(double a, double b)
         {
-            return a + b;
+            Accumulator = a + b;
+            return Accumulator;
         }
 
         public double Subtract(double a, double b)
         {
-            return a - b;
+            Accumulator = a - b;
+            return Accumulator;
         }
 
         public double Multiply(double a, double b)
         {
-            return a * b;
+            Accumulator = a * b;
+            return Accumulator;
         }
 
         public double Power(double x, double exp)
@@ -28,13 +31,21 @@ namespace Calculator
                 throw new InvalidDataException("Input is invalid");
             }
 
+            Accumulator = ret;
             return ret;
-
         }
 
         public double Divide(double dividend, double divisor)
         {
-            return dividend / divisor;
+            Accumulator = dividend / divisor;
+            return Accumulator;
+        }
+
+        public double Accumulator { get; private set; }
+
+        public void Clear()
+        {
+            Accumulator = 0;
         }
 
         public double Add(double addend)
