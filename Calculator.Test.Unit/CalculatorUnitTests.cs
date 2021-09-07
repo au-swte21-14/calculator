@@ -63,6 +63,7 @@ namespace Calculator.Test.Unit
         public void Clear()
         {
             Assert.AreEqual(_calc.Add(4), 4);
+            
             _calc.Clear();
             Assert.AreEqual(_calc.Accumulator, 0);
         }
