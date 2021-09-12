@@ -34,6 +34,7 @@ namespace Calculator.Test.Unit
         {
             Assert.AreEqual(_calc.Subtract(1, 1), 0);
             Assert.AreEqual(_calc.Subtract(1, 2), -1);
+            Assert.AreEqual(_calc.Subtract(2, 1.5), 0.5);
         }
 
         [Test]
@@ -49,6 +50,7 @@ namespace Calculator.Test.Unit
         {
             Assert.AreEqual(_calc.Divide(1, 1), 1);
             Assert.AreEqual(_calc.Divide(5.5, 5.5), 1);
+            Assert.That(_calc.Divide(100, 3), Is.EqualTo(33.3).Within(0.1));
             Assert.That(_calc.Divide(20.5, 5.5), Is.EqualTo(3.7).Within(0.2));
         }
 
@@ -57,6 +59,8 @@ namespace Calculator.Test.Unit
         {
             Assert.AreEqual(_calc.Power(2, 2), 4);
             Assert.AreEqual(_calc.Accumulator, 4);
+            Assert.AreEqual(_calc.Add(20), 24);
+            Assert.AreEqual(_calc.Accumulator, 24);
         }
 
         [Test]
@@ -74,6 +78,7 @@ namespace Calculator.Test.Unit
         {
             Assert.AreEqual(_calc.Add(1), 1);
             Assert.AreEqual(_calc.Add(2), 3);
+            Assert.AreEqual(_calc.Add(10), 13);
         }
 
         [Test]
@@ -90,6 +95,7 @@ namespace Calculator.Test.Unit
         {
             Assert.AreEqual(_calc.Subtract(1), -1);
             Assert.AreEqual(_calc.Subtract(5), -6);
+            Assert.AreEqual(_calc.Subtract(1.1), -7.1);
         }
 
         [Test]
