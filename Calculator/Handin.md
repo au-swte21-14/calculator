@@ -10,7 +10,7 @@
 
 ## Links to solutions
 
-| Name                        | URL                                                 |
-|-----------------------------|-----------------------------------------------------|
-| Jenkins                     | http://ci3.ase.au.dk:8080/job/SWTE21-14_Calculator/ |
-| Github                      | https://github.com/au-swte21-14/calculator          |
+| Name                        | URL                                                   |
+|-----------------------------|-------------------------------------------------------|
+| Jenkins                     | <http://ci3.ase.au.dk:8080/job/SWTE21-14_Calculator/> |
+| Github                      | <https://github.com/au-swte21-14/calculator>          |
